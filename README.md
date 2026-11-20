@@ -53,3 +53,7 @@ group IDs and the existing directory that holds the boxes.
 Run `./boxling completion zsh` to print the zsh completion script. For an
 installation on your shell's `PATH`, link the `boxling` launcher from this
 checkout into a directory on `PATH`.
+
+## License
+
+Boxling CLI is licensed under the [MIT License](LICENSE).
