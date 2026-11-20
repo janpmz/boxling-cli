@@ -1,0 +1,20 @@
+diff --git a/Makefile b/Makefile
+index 3b82487d..b92dc6b7 100644
+--- a/Makefile
++++ b/Makefile
+@@ -25,4 +25,4 @@ SWIFT_CONFIGURATION := $(if $(filter-out false,$(WARNINGS_AS_ERRORS)),-Xswiftc -
+ COVERAGE_FLAG ?=
+-export RELEASE_VERSION ?= 1.6.1-mybox.5
+-PACKAGE_VERSION ?= 1.6.1.5
++export RELEASE_VERSION ?= 1.6.1-mybox.6
++PACKAGE_VERSION ?= 1.6.1.6
+ PACKAGE_ID := io.github.janpmz.my-container-box.runtime
+diff --git a/Sources/Services/RuntimeLinux/Server/MyBoxBoot.swift b/Sources/Services/RuntimeLinux/Server/MyBoxBoot.swift
+index 551acf0e..c0f327fa 100644
+--- a/Sources/Services/RuntimeLinux/Server/MyBoxBoot.swift
++++ b/Sources/Services/RuntimeLinux/Server/MyBoxBoot.swift
+@@ -20,3 +20,3 @@ enum MyBoxBoot {
+         guard let serviceName else { throw ContainerizationError(.invalidState, message: "Cannot identify the runtime service account") }
+-        guard serviceName == "_mybox" else { return nil }
++        guard serviceName == "_boxling" || serviceName == "_mybox" else { return nil }
+         let id = configuration.id
